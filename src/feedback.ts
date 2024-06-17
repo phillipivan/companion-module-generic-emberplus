@@ -26,7 +26,7 @@ export function GetFeedbacksList(
   const feedbacks: { [id in FeedbackId]: CompanionFeedbackDefinition | undefined } = {
     [FeedbackId.Parameter]: {
       name: 'Parameter Equals',
-      description: 'Checks the current value of a paramter',
+      description: 'Checks the current value of a parameter',
       type: 'boolean',
       defaultStyle: {
         bgcolor: combineRgb(255, 255, 255),
