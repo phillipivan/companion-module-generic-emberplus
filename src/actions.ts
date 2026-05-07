@@ -250,6 +250,7 @@ export function GetActionsList(
 			callback: setValue(self, emberClient, EmberModel.ParameterType.Integer, ActionId.SetValueInt, state, queue),
 			subscribe: subscribeParameterAction(self),
 			learn: learnSetValueActionOptions(state, EmberModel.ParameterType.Integer, ActionId.SetValueInt),
+			optionsToIgnoreForSubscribe: ['factor', 'max', 'min', 'relative', 'useVar', 'valueVar', 'value'],
 		},
 		[ActionId.SetValueReal]: {
 			name: 'Set Value Real',
@@ -294,6 +295,7 @@ export function GetActionsList(
 			callback: setValue(self, emberClient, EmberModel.ParameterType.Real, ActionId.SetValueReal, state, queue),
 			subscribe: subscribeParameterAction(self),
 			learn: learnSetValueActionOptions(state, EmberModel.ParameterType.Real, ActionId.SetValueReal),
+			optionsToIgnoreForSubscribe: ['max', 'min', 'relative', 'useVar', 'valueVar', 'value'],
 		},
 		[ActionId.SetValueBoolean]: {
 			name: 'Set Value Boolean',
@@ -341,6 +343,7 @@ export function GetActionsList(
 			callback: setValue(self, emberClient, EmberModel.ParameterType.Boolean, ActionId.SetValueBoolean, state, queue),
 			subscribe: subscribeParameterAction(self),
 			learn: learnSetValueActionOptions(state, EmberModel.ParameterType.Boolean, ActionId.SetValueBoolean),
+			optionsToIgnoreForSubscribe: ['useVar', 'valueVar', 'value'],
 		},
 		[ActionId.SetValueEnum]: {
 			name: 'Set Value ENUM',
@@ -404,6 +407,7 @@ export function GetActionsList(
 			callback: setValue(self, emberClient, EmberModel.ParameterType.Enum, ActionId.SetValueEnum, state, queue),
 			subscribe: subscribeParameterAction(self),
 			learn: learnSetValueActionOptions(state, EmberModel.ParameterType.Enum, ActionId.SetValueEnum),
+			optionsToIgnoreForSubscribe: ['useVar', 'valueVar', 'value', 'asEnum', 'min', 'max', 'enumVal'],
 		},
 		[ActionId.SetValueString]: {
 			name: 'Set Value String',
@@ -437,6 +441,7 @@ export function GetActionsList(
 			callback: setValue(self, emberClient, EmberModel.ParameterType.String, ActionId.SetValueString, state, queue),
 			subscribe: subscribeParameterAction(self),
 			learn: learnSetValueActionOptions(state, EmberModel.ParameterType.String, ActionId.SetValueString),
+			optionsToIgnoreForSubscribe: ['parseEscapeChars', 'value'],
 		},
 		[ActionId.MatrixConnect]: {
 			name: 'Matrix Connect',
