@@ -126,10 +126,11 @@ export class EmberPlusInstance extends InstanceBase<EmberPlusConfig> {
 		this.debouncedUpdateActionFeedbackDefs.cancel()
 		this.destroyEmberClient()
 		this.variableValueUpdates = {}
-		this.state = new EmberPlusState()
+		this.state.clear()
 	}
 
 	private async finalizeSetup(): Promise<void> {
+		this.state.clearCache()
 		this.setupMatrices()
 		this.setupMonitoredParams()
 		this.updateCompanionBits({
