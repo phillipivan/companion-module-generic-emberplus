@@ -140,6 +140,7 @@ export class EmberPlusInstance extends InstanceBase<EmberPlusConfig> {
 			updateVariables: true,
 		})
 		await this.registerParameters()
+		this.checkFeedbacks()
 	}
 
 	/**
